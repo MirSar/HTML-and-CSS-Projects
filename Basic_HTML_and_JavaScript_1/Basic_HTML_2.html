@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
   <head> <!-- Head element can contain:1-Titles, 2-Scripts, 3-File attach,4-Character encoding, 5-meta data-->
-    <title> Displaying the AlertBox </title>
+    <title> write title here </title>
     <meta charset="utf-8">
     <!--script>
       alert('Hello World');
     </script-->
     <script src="Basic_JavaScript_1.js"></script>
+    <!-- below is a script for the button and document.getElementById-->
+    <!--script>
+        function myFirstFunction() {
+          var String = 'kiss me because you know you LOVED IT!';
+          var result = String.fontcolor('green');
+          document.getElementById('lovedItMan').innerHTML = result;
+        }
+    </script-->
   </head>
   <body>
     <main> <!--There should be only one main per HTML page  -->
       <p>That was a JavaScript ALERT BOX!<br>Did you like it?</p>
+      <br>
+      <button onclick="myFirstFunction()">
+        Click me if you liked it!
+      </button>
+      <br>
+      <p id="lovedItMan">I'll tell you something if you did :) </p>
     </main>
   </body>
   <Footer>
