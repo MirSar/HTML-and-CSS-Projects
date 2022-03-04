@@ -1,7 +1,29 @@
 <!doctype html>
-<html>
+<html lang="en">
+  <head>
+    <title>Basic_HTML_3</title>
+    <meta charset="utf-8">
+    <!--This is the global sytle for selected headings-->
+    <style>
+      h1 {color: blue;}
+      h3 {color: purple;}
+      h5 {color: green;}
+    </style>
+  </head>
   <body>
-    <h1>Heading</h1>
-    <p>paragraph</p>
+    <h1>Heading1 using global color,blue</h1>
+    <p>paragraph under heading1</p>
+    <br>
+    <div style="color:pink">
+      <h1>This heading is in the division1 section, pink</h1>
+      <p>note that the h1 is using gloabl color instead of the division color</p>
+      <h2>heading2 is undefined globally but under div1</h2>
+      <p>because h2 is not globally defined it is pink</p>
+      <h3>heading3 globally this is purple</h3>
+    </div>
+    <br>
+    <h1>This heading1 is after the division1 section</h1>
+    <p>The heading above should be in blue color</p>
+    <h2>heading2 after the div1</h2>
   </body>
 </html>
