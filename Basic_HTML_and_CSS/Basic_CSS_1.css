@@ -1,0 +1,21 @@
+  body {
+    background-image: url('heartPlantBackground.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  p {
+    color: purple;
+    text-align: center;
+  }
+  h1 {
+    color: Aqua;
+    text-align:center;
+  }
+  h2 {
+    color: gold;
+    text-align:center;
+  }
+  h3 {
+    color: purple;
+    text-align: left;}

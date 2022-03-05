@@ -4,26 +4,36 @@
     <title>Basic_HTML_3</title>
     <meta charset="utf-8">
     <!--This is the global sytle for selected headings-->
-    <style>
-      h1 {color: blue;}
+    <!--style>
+      body {
+        background-image: url('heartPlantBackground.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+      h1 {color: Aqua;text-align:center;}
+      p {text-align: center;}
       h3 {color: purple;}
       h5 {color: green;}
-    </style>
+    </style-->
+    <link rel="stylesheet" type="text/css" href="Basic_CSS_1.css">
   </head>
+
   <body>
-    <h1>Heading1 using global color,blue</h1>
-    <p>paragraph under heading1</p>
-    <br>
-    <div style="color:pink">
-      <h1>This heading is in the division1 section, pink</h1>
-      <p>note that the h1 is using gloabl color instead of the division color</p>
-      <h2>heading2 is undefined globally but under div1</h2>
-      <p>because h2 is not globally defined it is pink</p>
-      <h3>heading3 globally this is purple</h3>
+    <h1>To connect with the force One must do as Grogu do</h1>
+    <p>paragraph under heading1</p><br>
+
+    <div style="background-image: url('babyYoda-meditating.jpg');height: 400px; width: 1000px; border: 3px solid green;">
+      <h2>This section is reserved for meditation use only</h2>
+      <p>This is Grogu not baby Yoda</p>
+      <br><br><br><br><br><br><br><br><br><br><br><br>
+      <h3 style="text-align:left">Please be quite and let Grogu meditate</h3>
     </div>
-    <br>
+
     <h1>This heading1 is after the division1 section</h1>
-    <p>The heading above should be in blue color</p>
+    <p>this paragraph is controled by CSS file</p>
     <h2>heading2 after the div1</h2>
+    <p style="text-align: left;">The alignment is superseded to the left</P>
   </body>
+  
 </html>
