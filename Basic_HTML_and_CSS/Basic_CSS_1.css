@@ -4,6 +4,12 @@
     background-attachment: fixed;
     background-size: cover;
   }
+  .topHeading_1 {
+    color: snow;
+    background: black;
+    font-weight: bolder;
+    text-align: center;
+  }
   p {
     color: purple;
     text-align: center;
