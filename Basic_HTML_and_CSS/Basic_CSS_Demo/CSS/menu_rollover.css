@@ -1,0 +1,75 @@
+body {
+    background-color: #184352;
+}
+
+.wrap {
+    top: 0;
+    left: 0;
+    height: auto; /*adjusts the height as the screen changes*/
+    width: 100%;
+}
+
+.menu-container {
+    top: 0;
+    left: 0;
+    /*To the top edge of the screen */
+    position: absolute; /*upto the edge, no gaps*/
+    width: 100%;
+    background-color: #184352;    
+}
+
+.menu {
+    font: bold 12px/18px sans-serif;
+    text-align: center;
+    display: inline; /*this puts them on the same row(block level)*/
+    margin: 0;
+    padding: 0;
+    list-style: none; /*we dont want a dot next to the list*/
+}
+
+.menu li {  /*this is the list items inside the menu class*/
+    color: #b3b3b3;
+    display: inline-block; 
+    margin-right: -2px; /*neg number is used based on trial and error, want the boxes flush with each other*/
+    position: relative; /*the list boxes will be relative to the parent box (portfolio)*/
+    padding: 12px 40px;
+    border: 1px solid #9d9fa2;
+    border-radius: 1.5px;
+    background-color: #387593;
+    cursor: pointer;
+}
+
+.menu li:hover { /*when hovering the background and text color changes*/
+    background-color: #5eafdf;
+    color: #fff;
+}
+
+.menu li:hover ul {
+    display: block; /*we want it to be on new block level*/
+    opacity: 1;
+    /*while hovered, drop down-menu appears, this also avoids a block-level bug*/
+    visibility: visible;
+}
+
+.submenu {
+    padding: 0;
+    left: 0;
+    position: absolute;
+    top: 43.5px;
+    width: 125.5px;
+    opacity: 0; /*default is set to not visible*/
+    /*while not being hovered, drop down-menu hides 
+    this also avoids a block-level bug */
+    visibility: hidden;
+}
+
+.submenu li {
+    background-color: #387593;
+    display: block;
+    color: #b3b3b3;
+}
+
+.submenu li:hover {
+    color: #fff;
+    background-color: #5eafdf;
+}
