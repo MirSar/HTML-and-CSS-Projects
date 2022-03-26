@@ -5,7 +5,7 @@ Author: Mirwis Sarwary
 ***************************/
 
 html {
-    font-family:Arial, Helvetica, sans-serif
+    font-family:Arial, Helvetica, sans-serif;
     font-size: 62.5%;
     -webkit-tab-highlight-color: rgba(0,0,0,0); /*allows for older web browser use*/ 
     -webkit-text-size-adjust: 100%;
@@ -112,8 +112,8 @@ section {
     margin-left: -15px;
 }
 
-.clearfix:after; /*clearup sections that don't space correctly,bug fix */
-.container:after;
+.clearfix:after /*clearup sections that don't space correctly,bug fix */
+.container:after
 .navbar:after {
     clear: both;
     display: table;
