@@ -13,26 +13,26 @@
   </head>
   <body>
     <!--main container-->
-    <div class="container">
+    <div class="container" style="background-color: rgba(32, 90, 218, .1); ">
         
-        <!--START OF NavBar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
+      <!--START OF NavBar -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
     
-                    <li class="nav-item active">
-                        <a class="nav-link text-warning" href="#about">About </a>
-                    </li>
-                
-                    <li class="nav-item active">
-                        <a class="nav-link text-warning" href="#showtimes">Show times</a>
-                    </li>
-                    
-                    <li class="nav-item active">
-                        <a class="nav-link text-warning" href="#deals">Deals</a>
-                    </li>
+            <li class="nav-item active">
+                <a class="nav-link text-warning" href="#about">About </a>
+            </li>
+        
+            <li class="nav-item active">
+                <a class="nav-link text-warning" href="#showtimes">Show times</a>
+            </li>
+            
+            <li class="nav-item active">
+                <a class="nav-link text-warning" href="#deals">Deals</a>
+            </li>
 
-              </ul>
+           </ul>
 
               <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -46,14 +46,19 @@
         <!-- Jumbotron main heading band-->
         <div class="jumbotron jumbotron-fluid bg-primary text-center">
             <div class="container">
-              <h1 class="display-4 text-warning">SAR Cinemas</h1>
+              <h1 class="display-4 text-warning font-weight-bold">SAR Cinemas</h1>
               <p class="lead text-warning">Let's chat-up a movie&reg;!</p>
             </div>
         </div>
         <!--End of Jumbotron-->
 
         <!--about section-->
-        <h3 id="about" class="mt-5">ABOUT US:</h3>
+        <div class="row my-5">
+          <div class="col-sm" style="text-align: center; background-color: azure;">
+            <h3 id="about">---   ABOUT   ---</h3>
+          </div>
+        </div>
+        
         <div class="container">
 
             <div class="row align-items-start">
@@ -67,9 +72,9 @@
               <div class="col">
                 <!--Text-->
                 <h3 class="text-justify">Chat-up a Movie&reg; with your friends.<br></h3>
-                <p>Join in the fun!</p>
-                <p>live chatting earns you movie rewards credit.</p>
-                <p>Chatting your way through movies has never been so much fun.</p>
+                <p>1st- Purchase your ticket</p>
+                <p>2nd- Join your scheduled show time.</p>
+                <p>3rd- Live chatting starts when the movie starts.</p>
                 <!--end text-->
               </div>
               
@@ -92,7 +97,12 @@
         <!--End About section-->
 
         <!--Show Times-->
-        <h3 id="showtimes" class="mt-5">SHOW TIMES:</h3>
+        <div class="row my-5">
+          <div class="col-sm" style="text-align: center; background-color: azure;">
+            <h3 id="showtimes">---   SHOW TIMES   ---</h3>
+          </div>
+        </div>
+        
         <div class="card-group mb-5">
             <div class="card">
                 <img id="nowplaying1" class="card-img-top" src="./img/backtofuture.png" alt="Card image cap">
@@ -149,8 +159,12 @@
         <!--End of Show Times-->
 
         <!--Form-->
-        
-        <div id="deals" class="text-center">
+        <div class="row my-5">
+          <div class="col-sm" style="text-align: center; background-color: azure;">
+            <h3 id="deals">---   DEALS   ---</h3>
+          </div>
+        </div>
+        <div class="text-center">
             <form>
                 <h1 class="text-primary my-5">Sing up for membership!</h1>
                 <P class="text-primary">Membership includes Movie Club Rewards.</P>

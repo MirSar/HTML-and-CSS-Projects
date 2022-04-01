@@ -1,0 +1,268 @@
+/*HTML_CSS_Course: final assignment*/
+
+/*===========================
+Style section:
+=============================
+main page-container
+-----------------------------*/
+.page-container {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+/*-----------------------
+Content-wrap
+------------------------*/          
+.content-wrap {
+    top: 0;
+    left: 0;
+    padding-bottom: 5rem;
+}
+
+.content-wrap h1 {
+    text-align: center;
+    font-size: 3rem;
+    font-family: "tangerine";
+    color: rgb(26, 48, 214); 
+    padding-top: 50px;
+    margin: 15px;
+    font-weight: 900;
+}
+/*-----------------------
+Nav
+------------------------*/
+.navbar {
+    overflow: hidden;
+    background-color: aquamarine;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: blueviolet;
+    text-align: center;
+    padding: 13px 19px;
+    text-decoration:none;
+    font-size: 15px;
+    font-weight: 900;
+}
+/*video*/
+.video-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    opacity: .5;
+}
+
+/*--------------------------
+footer
+----------------------------*/
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 5rem;
+    text-align: center;
+    background-color: rgb(23, 184, 184);
+    color: blue;
+}
+
+/*-----------------------------
+Table 
+------------------------------*/
+table, th, td{
+    border: 1px solid gold;
+    padding: 5px;
+    background-color: greenyellow;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+th {
+    background-color: green;
+    color: azure;
+}
+
+/*---------------------------
+Image
+-----------------------------*/
+.image1-wrap {
+    position: relative;
+    text-align: center;
+}
+.image1-wrap img {
+    opacity: 1;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    border: 3px dashed rgb(82, 240, 108);
+    border-radius: 25%;
+    width: 50%; 
+    filter:drop-shadow(8px 8px 10px rgb(6, 245, 6)) saturate(3);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+/*-----------------------
+text over image
+------------------------*/
+/*text overlay*/
+
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 25%;
+    font-weight: 600;
+}
+.top-right {
+    position: absolute;
+    top: 8px;
+    right: 25%;
+    font-weight: 600;
+}
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 25%;
+    font-weight: 600;
+}
+.bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 25%;
+    font-weight: 600;
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 800;
+    color: gold;
+}
+
+/*------------------------
+column
+--------------------------*/
+.column {
+    opacity: 1;
+    display:inline-block;
+    width: 30%;
+    padding: 5px;
+}
+
+.row {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/*clear floats after the columns*/
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#join1{
+    opacity: .3;
+}
+#join2{
+    opacity: .3;
+}
+.textOverlay{
+    opacity: .5;
+}
+
+/*image overlay fade*/
+.text_IOF {
+    background-color: #04AA6D;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+    margin-top: 50px;
+    text-align: center;
+    font-variant: small-caps;
+}
+
+.container_IOF {
+    position: relative;
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+    font-variant: small-caps;
+}
+
+.image_IOF {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+  
+.middle_IOF {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/*================================
+Animation and Effects
+==================================*/
+/*----------------------
+hover effects
+-------------------------*/
+.navbar a:hover {
+    background-color: gold;
+    color: black;
+}
+
+#join1:hover {
+    opacity: 1;
+    font-size: x-large;
+}
+
+#join2:hover {
+    opacity: 1;
+    font-size: x-large;
+}
+
+.centered:hover, .bottom-left:hover, .bottom-right:hover,
+.top-left:hover, .top-right:hover {
+    opacity: 1;
+    background-color: green;
+    color:gold;
+    font-size: xx-large;
+}
+
+/*show image over text*/
+.hover_img a { position:relative; }
+.hover_img a span { position:absolute; display:none; z-index:99; }
+.hover_img a:hover span { display:block; height: 200px; width: 200px; overflow: visible;}
+
+/*Image Overlay Fade*/
+.container_IOF:hover .image_IOF {
+    opacity: 0;
+}
+
+.container_IOF:hover .middle_IOF {
+    opacity: 1;
+}
