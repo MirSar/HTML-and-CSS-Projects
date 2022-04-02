@@ -132,9 +132,11 @@ img {
 
 /* Image element hover effects */
 img:hover {
-	filter: grayscale(5%);  /* Brings back most of the image's color when hovered over */
+	filter: grayscale(3%);  /* Brings back most of the image's color when hovered over */
     transition: transform 2s; /* Transition lasts 1 second */
-	transform: scale(1.13); /* Image is increased slightly when hovered over */
+	transform: scale(1.27); /* Image is increased slightly when hovered over */
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(64,255,27,0.69); 
+    box-shadow: 5px 5px 15px 5px rgba(64,255,27,0.69);
 }
 
 
@@ -308,13 +310,21 @@ footer {
     height: 400px;
     background-color: rgb(0, 35, 5);
 }
-
+/*allows for column1 variation */
+.Column_1b {
+    float: left;
+    width: 50%; /* This ensures the column takes up half of the page width */
+    padding: 10px;
+    padding-top: 3%; /* This ensures there is space between the top of the column and our headings */
+    height: 400px; /* This sets the height of the column to 400px -  this may need to be adjusted depending on the text you enter */
+    background-color:rgb(0, 58, 9) /* Sets the background color of the columns with class Column_1 */
+}
 
 /* This class is applied to the columns in the final row, overriding the height and padding to provide more room for the contact form  while keeping the rest of the formatting from Column_1 or Column_2 */
 .Column_tall {
     padding-top: 3.5%;
     height: 450px;
-    margin-left: 20rem; /*this centers the contact section with title_vid on bothsides*/
+    margin-left: 20rem; /*creates the bottom contact section effect*/
 }
 
 /* This inserts something after the content of selected elements (in this case the elements with class "Row") */
