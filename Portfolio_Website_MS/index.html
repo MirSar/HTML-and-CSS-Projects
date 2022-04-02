@@ -1,18 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+    
     <!--Head-->
     <head>
+        <!--Created by: Mirwais Sarwary, Affiliation: The Tech Academy, Date: 4/2/2022 -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width" />
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
-
-        <title>Mirwais Sarwary</title>
         <link rel="stylesheet" type="text/css" href="./CSS/portfolio_style.css">
+       
+        <title>Mirwais Sarwary</title>
+    
     </head>
+    <!--End Head-->
 
     <!--Body-->
-    <body class="Background">
+    <body class="Background"> <!--note this class is not yet used-->
         
         <!--Navbar-->
         <div class="Navbar">
@@ -39,7 +43,7 @@
 
         <!--Background video-->
         <div id="Home">
-            <video autoplay muted loop id="Typing_Video">
+            <video autoplay muted loop id="Main_Video">
                 <source src="./Videos/bg_Matrix.mp4" type="video/mp4">
                 <!--Display message if video fails to run-->
                 Your browser does not support HTML5 video.
@@ -48,19 +52,22 @@
 
         <!--Video text-->
         <div class="Video_Text">
-            
-            <p class="glow">Mirwais Sarwary</p>
+            <p class="glow center">Mirwais Sarwary</p>
             <strong>
                 <p class="center">
-                    <q>The computer programmer is a creator of universes for which he alone is the lawgiver.
-                        <br>No playwright, no stage director, no emperor, however powerful, has ever exercised such absolute authority to arrange a stage or
-                        <br>field of battle and to command such unswervingly dutiful actors or troops.
+                    <q>Science can amuse and fascinate us all, 
+                        but it is engineering that changes the world.
                     </q>
-                    <br> -Joseph Weizenbaum
+                    <br>- Isaac Asimov
+                    <br><br>
+                    <q>The ideal engineer is a composite… 
+                        <br>He is not a scientist, he is not a mathematician, he is not a sociologist or a writer, 
+                        <br>but he may use the knowledge and techniques of any or all of these disciplines 
+                        <br>in solving engineering problems.
+                    </q>
+                    <br> -N.W. Dougherty
                     <br>
-                    <br>Welcome to my portfolio website. On it, I will tell you about my background and experience.
-                    <br>
-                    <br> Thank you for stopping by and enjoy! 
+                    <br>Welcome to my portfolio website. Let's make dreams come true!  
                 </p>
             </strong>
         </div>
@@ -72,12 +79,18 @@
                 <img src="./images/bg_binary.png" alt="Replace with your own image and description">
             </div>
             <!--Right column-->
-            <div class="Column_1">
+            <div class="Column_1" style="overflow-y: scroll;">
                 <h1>About</h1>
                 <p>
-                    I am a software developer who loves to create products that provide quality service! I enjoy time with my family and time to reflect. 
+                    As an Engineer I loves to create quality products and services that benefit mankind! 
                     <br>
-                    <br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Software Developer Boot Camp, and trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, C# and more. 
+                    <br>I have the following credentials:
+                    <ul>Engineering Degree: Bachelor of Science in Mechanical/Biological Sys</ul>
+                    <ul>Engineering Degree: Master of Science in Medical Devices</ul>
+                    <ul>Certification:      Software Developer Boot Camp</ul>  
+                    <ul>Certification:      Fundamental of Engineering</ul>
+                    <br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Software Developer Boot Camp, 
+                    and trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, C# and more. 
                     <br>
                     <br>I am a full-stack developer and would love to work with you on your project. <a href="#Contact">Contact</a> me below!
                 </p>
@@ -97,18 +110,18 @@
             </div>
             <!--Right column-->
             <div class="Column_2">
-                <a href="https://github.com/the-tech-academy" target="_blank"><img src="images/GitHub.png" alt="GitHub Logo"></a>
+                <a href="https://github.com/the-tech-academy" target="_blank"><img src="./images/gitHubLogo.png" alt="GitHub Logo"></a>
             </div>
         </div>
 
         <!--Contact section-->
         <div class="Row" id="Contact">
             <!--Contact image, left column-->
-            <div class="Column_2 Column_tall">
+            <div class="Column_2 Column_contact Column_2b">
                 <img id="img1" src="./images/bridge-matrix.png" alt="Contact_Image">
             </div>
             <!--Contact form, right column-->
-            <div class="Column_1b Column_tall">
+            <div class="Column_1 Column_contact Column_1b">
                 <h1 class="white-text">Contact</h1>
                 <!--This specifies where and how to send the form data; we are leaving it blank-->
                 <form action="" method="POST"> <!-- Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute -->

@@ -1,85 +1,25 @@
-/***** GENERAL STYLING *****/
-/* Body */
+/*===============
+GENERAL STYLING
+=================*/
+/* Body Section */
 body {
-    margin: 0%  /* This ensures our site displays all the way to the edge of the browser screen */
+    margin: 0%  /* This ensures our site is displayed across the entire browser screen */
 }
 
-/* Heading 1 elements */
+/* Heading 1 Elements */
 h1 {
-    text-transform: uppercase; /* Capitalizing all h1 headings */
-    font-family: "Trebuchet MS", Optima; /* Sets the font family of all h1 headings */
+    text-transform: uppercase; 
+    font-family: "Trebuchet MS", Optima; 
     text-align: center; /* Centering all h1 elements */
-    margin-top: 3%; /* Adds a small margin above h1 elements */
-    color: #1a1a1a; 
+    margin-top: 3%;
+    color: rgb(0, 0, 0); 
 }
 
-/* Heading 1 element hover effect */
+/* Heading 1 Element: hover effect */
 h1:hover {
-    filter: grayscale(5%); /* Adds a slightly gray filter to the h1 headings when hovered over */
-    transform: scale(1.1); /* When the h1 elements are hovered over they increase in size by 1.1 */
-    transition: transform 1s; /* This causes the transformation to last 1 second */
-}
-
-/* Styling for portfolio title text */
-.white-text {
-    color: #fff; /* This is used to change the color of the portfolio title text */
-}
-/*retro text*/
-@-webkit-keyframes blink {
-    to {
-        opacity: 0.0;
-    }
-}
-@-moz-keyframes blink {
-    to {
-        opacity: 0.0;
-    }
-}
-@-ms-keyframes blink {
-    to {
-        opacity: 0.0;
-    }
-}
-@-o-keyframes blink {
-    to {
-        opacity: 0.0;
-    }
-}
-@keyframes blink {
-    to {
-        opacity: 0.0;
-    }
-}
-
-.arrow {
-    font: italic bold 20px Georgia, serif;
-    color: white;
-    text-shadow: 0px 0px 40px #39FF14, 0px 0px 40px #39FF14;
-}
-
-.dash {
-    font: italic bold 27px Georgia, serif;
-    color: white;
-    text-shadow: 0px 0px 40px #39FF14, 0px 0px 40px #39FF14, 0px 0px 40px #39FF14;
-    -webkit-animation-name: blink;
-    -webkit-animation-duration: 1s;
-    -webkit-animation-iteration-count: infinite;
     
-    -moz-animation-name: blink;
-    -moz-animation-duration: 1s;
-    -moz-animation-iteration-count: infinite;
-    
-    -ms-animation-name: blink;
-    -ms-animation-duration: 1s;
-    -ms-animation-iteration-count: infinite;
-    
-    -o-animation-name: blink;
-    -o-animation-duration: 1s;
-    -o-animation-iteration-count: infinite;
-    
-     animation-name: blink;
-     animation-duration: 1s;
-     animation-iteration-count: infinite;
+    transform: scale(1.3); 
+    transition: transform 1s;
 }
 
 /* Paragraph elements */
@@ -94,19 +34,8 @@ p {
 
 /* Paragraph element hover effect */
 p:hover {
-    transition: transform 1s; /* This makes the transform effect last 1 second */
-	transform: scale(1.01); /* This makes the paragraphs increase slightly in size when hovered over */
-}
-
-/* Center class - this applies to all elements with the class "center" */
-.center {
-    text-align: center; /* This center aligns the text */
-}
-
-/* Center class hover effect - This only affects the quote, github link, and footer */
-.center:hover {
-    transition: transform 2s; /* This makes the transform effect last 2 seconds */
-    transform: scale(1.1); /* This makes the elements with class "center" increase in size by 1.1 when hovered over */
+    transition: transform 1s; 
+	transform: scale(1.01); 
 }
 
 /* Anchor elements */
@@ -116,7 +45,7 @@ a {
 
 /* Quotation elements */
 q {
-    font-style: italic; /* This makes the quote italicized */
+    font-style: italic;
 }
 
 /* Image elements */
@@ -133,12 +62,11 @@ img {
 /* Image element hover effects */
 img:hover {
 	filter: grayscale(3%);  /* Brings back most of the image's color when hovered over */
-    transition: transform 2s; /* Transition lasts 1 second */
-	transform: scale(1.27); /* Image is increased slightly when hovered over */
-    -webkit-box-shadow: 5px 5px 15px 5px rgba(64,255,27,0.69); 
+    transition: transform 1s; 
+	transform: scale(1.13);
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(64,255,27,0.69); /* This applies the effect for Safari 4.0 - 8.0 */
     box-shadow: 5px 5px 15px 5px rgba(64,255,27,0.69);
 }
-
 
 /* The @media rule is used in media queries to apply different styles for different media/types of devices */
 /* On screens 576px and smaller the images will be 100px tall and centered vertically in the column */
@@ -152,14 +80,105 @@ img:hover {
 /* Styling for footer element */
 footer {
     padding: 2%; /* This gives the footer padding that is equal to 2% of the width of the element's area */
-    background-color: white;
+    background-color: rgb(189, 254, 222);
 }
-/***** END OF GENERAL STYLING *****/
 
-/***** NAVBAR STYLING *****/
+/* Center class - elements of this class will be centered*/
+.center {
+    text-align: center; /* This center aligns the text */
+}
+
+/* Center class hover effect - This only affects the quote, github link, and footer */
+.center:hover {
+    text-shadow: 0px 0px 40px #39FF14, 3px 3px 45px #27ff01;
+    transition: transform 1s;
+    transform: scale(1.1);
+}
+
+/*====================
+END of GENERAL STYLING
+======================*/
+
+
+/*======================
+Styling text options 
+========================*/
+/*white text with shadow effect*/
+.white-text {
+    color: white;
+    text-shadow: 0px 0px 40px #39FF14, 3px 3px 45px #27ff01;
+}
+/*glow effect on text*/
+.glow {
+    opacity: 1;
+    font-size: 50px;
+    color: #fff;
+    font-variant-caps: small-caps;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
+} 
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #000fe6, 0 0 40px #e60073, 0 0 50px #d7e600, 0 0 60px #00a5e6, 0 0 70px #000fe6;
+    }
+
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #39FF14, 0 0 40px #39FF14, 0 0 50px #39FF14, 0 0 60px #39FF14, 0 0 70px #39FF14, 0 0 80px #39FF14;
+    }
+}
+/* This applies the effect below for Safari 4.0 - 8.0 */
+@-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #000fe6, 0 0 40px #e60073, 0 0 50px #d7e600, 0 0 60px #00a5e6, 0 0 70px #000fe6;
+    }
+
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #39FF14, 0 0 40px #39FF14, 0 0 50px #39FF14, 0 0 60px #39FF14, 0 0 70px #39FF14, 0 0 80px #39FF14;
+    }
+}
+
+/*retro text*/
+.arrow {
+    font: italic bold 20px Georgia, serif;
+    color: white;
+    text-shadow: 0px 0px 40px #39FF14, 3px 3px 45px #27ff01;
+}
+
+.dash {
+    font: italic bold 27px Georgia, serif;
+    color: white;
+    text-shadow: 0px 0px 40px #39FF14, 3px 3px 45px #27ff01;
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    /* This applies the effect below for Safari 4.0 - 8.0 */
+    -webkit-animation-name: blink;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+    to {
+        opacity: 0.0;
+    }
+}
+/* This applies the effect below for Safari 4.0 - 8.0 */
+@-webkit-keyframes blink {
+    to {
+        opacity: 0.0;
+    }
+}
+/*==========================
+End of Styling text options 
+=============================*/
+
+
+/*================================
+****** NAVBAR STYLING ******
+==================================*/
 .Navbar {
     overflow: hidden; /* This ensures that any content that overflows beyond the boundary of our nav bar is not displayed */
-    background-color: rgb(3, 45, 3); /* This colors the navbar black */
+    background-color: rgb(3, 45, 3); 
     position: fixed; /* This keeps the navbar at the top of the screen as we scroll */
     top: 0; /* This ensures no space is displayed above the navbar */
     width: 100%; /* This makes the navbar span the entire width of the page */
@@ -179,13 +198,11 @@ footer {
     float: left; /* This specifies that the text floats on the left on the navbar */
     display: block; /* This ensures that other text will be displayed on the same line or row, instead of a new line */
     color: white; /* This is the font color for text on our navbar */
-    padding: 14px 16px; /* This adds padding around our text */
-    text-decoration: none; /* This gets rid of the underlines under the text on our navbar */
-    
     text-shadow: 0px 0px 40px #39FF14, 0px 0px 40px #39FF14;
-    
-    font-family: Avant Garde, Helvetica; /* This specifies the font family for text on our navbar */
-    font-size: 20px; /* This specifies the font size for text on our navbar */
+    padding: 14px 16px; /* This adds padding around our text */
+    text-decoration: none; /* This gets rid of the underlines under the text on our navbar */    
+    font-family: Avant Garde, Helvetica; 
+    font-size: 20px;
     text-align: center; /* This centers the text within its container */
     position: relative; /* This sets the text relative to its normal positioning, allowing us to use the animation below */
     -webkit-animation: moveNavText 5.75s; /* Animation for Safari 4.0 - 8.0 */
@@ -217,37 +234,16 @@ footer {
 .Navbar a.active { /* This targets the a element on the navbar with the "active" class */
     background-color: darkgray;
 }
+/*================================
+****** END of NAVBAR STYLING ******
+==================================*/
 
-/*experimental text*/
-.retro {
-    font: italic bold 200px Georgia, serif;
-    color: white;
-    text-shadow: 0px 0px 40px #39FF14, 0px 0px 40px #39FF14;
-}
 
-.glow {
-    opacity: 1;
-    font-size: 50px;
-    color: #fff;
-    font-variant-caps: small-caps;
-    text-align: center;
-    animation: glow 1s ease-in-out infinite alternate;
-} 
-
-@-webkit-keyframes glow {
-    from {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #000fe6, 0 0 40px #e60073, 0 0 50px #d7e600, 0 0 60px #00a5e6, 0 0 70px #000fe6;
-    }
-
-    to {
-        text-shadow: 0 0 20px #fff, 0 0 30px #39FF14, 0 0 40px #39FF14, 0 0 50px #39FF14, 0 0 60px #39FF14, 0 0 70px #39FF14, 0 0 80px #39FF14;
-    }
-}
-/***** END OF NAVBAR STYLING *****/
-
-/***** VIDEO STYLING *****/
+/*================================
+****** Video STYLING ******
+==================================*/
 /* Formatting for background video */
-#Typing_Video {
+#Main_Video {
     position: fixed; /* This fixes the video to the page */
     right: 0; /* This ensures there is no space between the edge of the video and the edge of the page */
     bottom: 0; /* This ensures no space between the bottom of the video and the bottom of the page */
@@ -258,7 +254,7 @@ footer {
 
 /* Screens that are 576px and smaller will not display the background video */
 @media screen and (max-width: 576px) {
-    #Typing_Video {
+    #Main_Video {
         display: none;
     }
 }
@@ -279,9 +275,15 @@ footer {
     from {top: -50vw;} /* This sets the position of the video text to above the viewport */
     to {top: 0vw;} /* This moves the video text to the normal positioning on the viewport */
 }
-/***** END OF VIDEO STYLING *****/
+/*================================
+****** END OF VIDEO STYLING ******
+==================================*/
 
-/***** TABLE STYLING -  this section covers the styling of the columns and rows within the table *****/
+
+/*================================
+****** TABLE STYLING ******
+==================================*/
+/*this section covers the styling of the columns and rows within the table */
 * { /* The asterisk is a universal selector that applies this effect to all elements on the page */
     box-sizing: border-box; /* This creates a box with a border within which we will place most of our text */
 } 
@@ -312,19 +314,23 @@ footer {
 }
 /*allows for column1 variation */
 .Column_1b {
-    float: left;
-    width: 50%; /* This ensures the column takes up half of the page width */
-    padding: 10px;
-    padding-top: 3%; /* This ensures there is space between the top of the column and our headings */
-    height: 400px; /* This sets the height of the column to 400px -  this may need to be adjusted depending on the text you enter */
-    background-color:rgb(0, 58, 9) /* Sets the background color of the columns with class Column_1 */
+    background-color:rgb(0, 58, 9); /* Sets the background color of the columns with class Column_1 */
+    height: 469px;
+    padding-top: 3%;
+}
+/*allows for column2 variation */
+.Column_2b {
+    height: 369px;
+    padding-top: 1.3%;
 }
 
-/* This class is applied to the columns in the final row, overriding the height and padding to provide more room for the contact form  while keeping the rest of the formatting from Column_1 or Column_2 */
-.Column_tall {
-    padding-top: 3.5%;
-    height: 450px;
-    margin-left: 20rem; /*creates the bottom contact section effect*/
+/* This class is applied to the columns in the final row, overriding the stated formats while keeping the rest of the formatting from Column_1 or Column_2 */
+.Column_contact {
+    float: none;
+    display: block;
+    width: 51%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* This inserts something after the content of selected elements (in this case the elements with class "Row") */
@@ -333,9 +339,15 @@ footer {
 	display: table; /* The display property specifies the type of display behavior; the table value tells the browser to treat the element as a table */
 	clear: both; /* This clears any other elements from floating on the left or the right of an element */
 }
-/***** END OF TABLE STYLING *****/
 
-/***** CONTACT FORM STYLING *****/
+/*================================
+****** END OF TABLE STYLING ******
+==================================*/
+
+
+/*================================
+****** CONTACT FORM STYLING ******
+==================================*/
 /* input[type=text] targets all text input sections of the contact form */
 input[type=text] {
     width: 100%; /* Each input box covers the full width of the container */
@@ -384,4 +396,6 @@ form {
     padding: 10px; /* Adds padding to the contact form */
     font-family: "Trebuchet MS", Optima;
 }
-/***** END OF CONTACT FORM STYLING *****/
+/*================================
+**END OF CONTACT FORM STYLING **
+==================================*/
