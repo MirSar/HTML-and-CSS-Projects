@@ -374,7 +374,7 @@ input[type=submit] {
     padding: 12px 20px; /* Adds padding to the submit button */
     border: none; /* Removes the border from the submit button */
     border-radius: 4px; /* Gives the submit button the same rounded corners as the text boxes */
-    cursor: pointer; /* Changes the cursor to pointer when over the submit button */
+    cursor: pointer; /* Changes the preview to pointer when over the submit button */
     display: block; /* Allows the submit button to be centered */
     margin-left: auto; /* In combination with "margin-right: auto" this will center the submit button */
     margin-right: auto;

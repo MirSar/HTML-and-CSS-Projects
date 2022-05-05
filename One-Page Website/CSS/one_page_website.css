@@ -1,0 +1,417 @@
+/*============================================
+Project: One-Page_website
+content="A HTML, CSS and JS One-Page_website
+Author: Mirwais Sarwary
+==============================================
+Let's beautify :)
+==============================================*/
+
+/*******************************************
+General styling 
+********************************************/
+
+/*************************************
+grid layout system - Nav and home 
+***************************************/
+#nav-container-bkg { 
+    background-image: linear-gradient(black,white,red,white,green);
+    background-repeat: no-repeat ;
+    
+    border-radius: 13px;
+    width: 100%;
+    
+    margin-left: auto;
+    margin-right: auto;
+   
+    margin-top: 10px;
+    margin-bottom: 30px;
+    position: sticky;
+    box-shadow: 3px 0px 15px rgba(206, 252, 136, 0.5), 3px 3px 25px rgb(152, 249, 6), -3px 0px 35px rgb(232, 249, 0); 
+}
+
+#navHomeContainer {
+    display: grid;
+    gap: 5px;
+    /*columns and rows spacing arrangement using free space unit*/
+    grid-template-columns: .3fr 1fr 1fr 1fr 1fr .3fr;
+    grid-template-rows: auto 5px 50px 50px;
+    /*allows for use of grid-area names for the layout*/
+    grid-template-areas: 
+        ". n1 n2 n3 n4 ."
+        "x x x x x x"
+        "Hh Hh Hh Hh Hh Hh"
+        "Hd Hd Hd Hd Hd Hd";
+    
+    /*applies for all items - align along the block(column) axis*/
+    align-items: center;
+
+    /*handling individual items, so this is not needed*/
+    /*justify-content: space-between;*/
+}
+
+.navBarHome {
+    grid-area: n1;
+    min-height: fit-content;
+    place-self: start center;
+    padding-top: 10px;
+    font-family:fantasy, Arial, Helvetica, sans-serif;
+    font-size: xx-large;
+}
+.navBarGallery {
+    grid-area: n2;
+    min-height: fit-content;
+    place-self: start center;
+    padding-top: 10px;
+    font-family:fantasy, Arial, Helvetica, sans-serif;
+    font-size: xx-large;
+}
+.navBarVideo {
+    grid-area: n3;
+    min-height: fit-content;
+    place-self: start center;
+    padding-top: 10px;
+    font-family:fantasy, Arial, Helvetica, sans-serif;
+    font-size: xx-large;
+}
+.navBarContact {
+    grid-area: n4;
+    min-height: fit-content;
+    place-self: start center;
+    padding-top: 10px;
+    font-family:fantasy, Arial, Helvetica, sans-serif;
+    font-size: xx-large;
+}
+
+.homeHeading {
+    grid-area: Hh;
+    justify-self: center;
+
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: x-large;
+    color: rgb(69, 197, 197);
+
+    padding: 20px;
+}
+.homeDescription {
+    grid-area: Hd;
+    place-self: center;
+}
+
+
+/*************************************
+Style Gallery Section -Lightbox
+**************************************/
+.wrapper-gallery {
+  margin: 0 3vw;
+  background-color: antiquewhite;
+}
+
+/* Gallery container */
+#index-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 10px;
+  /*grid layout template*/
+  grid-template-areas: 
+  "gallery-p gallery-p gallery-p gallery-p"
+  "gallery-h2 gallery-h2 gallery-h2 gallery-h2"
+  "img1 img2 img3 img7"
+  "img4 img5 img6 img7"
+  
+}
+
+/*For the images inside the container */
+#index-gallery .gallery-image {
+  /*default settings for the individual images */
+  width: 100%;
+  min-height: 300px;
+  /*defining the images that will be inside these containers*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+/*individual images section*/
+#index-gallery p {
+ grid-area: gallery-p;
+}
+#index-gallery h2 {
+  grid-area: gallery-h2;
+}
+
+#index-gallery .img1 {
+  grid-area: img1;
+  /*link to the image*/
+  background-image: url("../Images/Thumb/img1.png");
+  
+}
+#index-gallery .img2 {
+  grid-area: img2;
+  /*link to the image*/
+  background-image: url("../Images/Thumb/img2.png");
+  
+}
+#index-gallery .img3 {
+  grid-area: img3;
+  /*link to the image*/
+  background-image: url("../Images/Thumb/img3.png");
+  
+}
+#index-gallery .img4 {
+  grid-area: img4;
+  /*link to the image*/
+  background-image: url("../Images/Thumb/img4.png");
+  
+}
+#index-gallery .img5 {
+  grid-area: img5;
+  /*link to the image*/
+  background-image: url("../Images/Thumb/img5.png");
+  
+}
+#index-gallery .img6 {
+  grid-area: img6;
+  /*link to the image*/
+  background-image: url("../Images/Thumb/img6.png");
+  
+}
+#index-gallery .img7 {
+  grid-area: img7;
+  /*link to the image*/
+  background-image: url("../Images/Thumb/img7.png");
+  /*This image spans 2 rows so we need override the default size*/
+  min-height: 610px;
+}
+
+/* Gallery image titles*/
+.gallery-image div {
+  /*for the darkened background*/
+  width: 100%;
+  height: 100%;
+  background-color:black;
+  /*we want to see the background image when we hover over it, not now*/
+  opacity: 0;
+  /*for centering the content*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.gallery-image a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  /*removes the default underline of anchor tags */
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.gallery-image div:hover {
+  opacity: .8;
+  /*we want smooth transition of title fading*/
+  transition: all ease-in-out 100ms;
+}
+
+/*class for the Popup window we created using JS */
+.image-window {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(0, 0, 0,.9);
+  /*we want this to be on top of everything else on the website*/
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  cursor: pointer;
+  /*to get the image centered inside the container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /*set index of 100 for the Popup box, will need higher index for the image inside it*/
+  z-index: 100;
+}
+/*Style for the Popup Image */
+.image-window img {
+  max-height: 80vh;
+  max-width: 80vw;
+}
+
+/*Styling for the next & previous buttons*/
+.img-btn-next,.img-btn-prev { /* this class was set in JS */
+  /*using display block so we can add background by adding padding*/
+  display: block;
+  padding: 6px 10px;
+  border-radius: 3px;
+  background-color: #111111;
+  position: fixed;
+  top: 48vh; /*button is positioned from top to bottom*/
+  z-index: 500; /*needs to be higher than 100 we set for the popup window*/
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+/*button hover effect*/
+.img-btn-next:hover, .img-btn-prev:hover {
+  opacity: .8;
+}
+
+
+/*==========================
+CONTACT STYLES
+==============================*/
+ /*for the alignment of the containers*/
+.flex-container { 
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 0px auto;
+    background-color: rgba(100,65,0,.3);
+    box-shadow: 2px 2px 10px 0 rgba(0,0,0,.5);
+}
+
+#contact {
+    background-color: #f5f3f3;
+}
+
+.reservation {
+    width: 60%;
+    padding: 10px;
+    border-radius: 8px;
+    /*shortcut to center */
+    margin: 0px auto; 
+    background-color: rgba(100,65,0,.3);
+    /*box-shadow has two diff features here lft side vs rt side */
+    box-shadow: -1px -1px 1px 0 rgba(0,0,0,.1), 1px 2px 10px 0 rgba(0,0,0,.5);
+}
+
+.reservation h2 {
+    width: 70%;
+    text-align: center;
+    /*shortcut to center content */
+    margin: 0px auto;
+    color: #13161b;
+    font-weight: 500;
+    font-size: 1.1em;
+    letter-spacing: 0pt;
+    word-spacing: 0pt;
+}
+
+.reservation h2 span {
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+    color: #13161b;
+    font-weight: 900;
+    font-size: 1.5em;
+    font-variant: small-caps;
+    letter-spacing: .4pt;
+    word-spacing: .3pt;
+}
+
+.reservation p {
+    color: #13161b;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.reservation form {
+    font-size: 15px;
+    outline: none;
+    font-weight: 600;
+    color: #8d8e8f;
+    padding: 12px 12px;
+    width: 70%;
+    border: 1px solid #808080;
+    margin: 2% auto;
+    border-radius: 7px;
+    background: rgb(227, 222, 222);
+    box-shadow: 2px 3px 3px 0px rgba(0,0,0,.3);
+    font-family: 'Raleway', sans-serif;
+}
+
+.reservation input[type="text"] {
+    font-size: 15px;
+    outline: none;
+    font-weight: 600;
+    color: #8d8e8f;
+    padding: 2% 1% 2% 7%;
+    width: 80%;
+    border-top: 1px solid #090b0d;
+    border-right: 2px solid #424549;
+    border-bottom: 2px solid #424549;
+    border-left: 1px solid #090b0d;
+    margin: 10px 1em;
+    border-radius: 7px;
+    background: #13161b;
+    box-shadow: inset 0px 3px 0px 0px rgba(5, 5, 5, .15);
+    font-family: 'Raleway', sans-serif;
+}
+
+.reservation input[type="text"]:hover {
+    box-shadow: 0 0 18px rgba(100, 65, 0, .8);
+}
+
+.form-spacer {
+    padding: 30px 39px;
+}
+
+.terms {
+    margin: 30px 1px 0 0;
+    margin-top: 7%;
+    padding-left: 52px;
+    font-size: 14px;
+    line-height: 5px;
+    color: #000;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    position: relative;
+    display: inline;
+    float: right;
+}
+
+.terms:hover {
+    color: orange;
+    text-decoration: underline;
+}
+
+.submit input[type="submit"] {
+    color: rgb(225, 225, 225);
+    cursor: pointer;
+    border: none;
+    font-weight: 900;
+    outline: none;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    margin: 0px 3%;
+    padding: 7px 0px;
+    width: 25%;
+    font-size: 18px;
+    transition: border-color 0.3s color 0.3s background-color 0.3s;
+    border-radius: 7px;
+    background-color: #797a7b;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.3);
+}
+
+.submit input[type="submit"]:hover {
+    color: #000;
+    background-color: #8d8e8f;
+    box-shadow: inset 1px 2px 15px 0 rgba(0,0,0,.5);
+}
+
+/*======================
+FOOTER STYLE
+========================*/
+#footer {
+    background-color: rgba(100,65,0,.3);
+    color: #000;
+    text-shadow: 2px 2px 8px 0 (0,0,0,.4);
+    padding: 20px 50px 20px 50px;
+    text-align: right;
+}

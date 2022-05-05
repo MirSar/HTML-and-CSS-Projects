@@ -62,7 +62,7 @@ PHOTO OVERLAY TRANSITIONS (ANIMATION)
     opacity: 0; /*dont see overlay until you hover over it*/
     transition: opacity .1s;/* this created the animation: becomes visible(opacity) quickly .1s*/
     border-radius: 10px;
-    cursor: pointer;
+    preview: pointer;
 }
 .photo-overlay p {
     width: 100%; /*how much of the space can be used for the p */

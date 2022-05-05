@@ -313,7 +313,7 @@ CONTACT STYLES
 
 .submit input[type="submit"] {
     color: rgb(225, 225, 225);
-    cursor: pointer;
+    preview: pointer;
     border: none;
     font-weight: 900;
     outline: none;

@@ -61,7 +61,7 @@ INDIVIDUALLY SELECT A SQUARE IN THE ARRAY
 }
 
 /*----------------------------------
-HOVER EFFECT (when cursor-pointer is on the square, do this..)
+HOVER EFFECT (when preview-pointer is on the square, do this..)
 Also: TRANSLATE & TRANSFORM EFFECTS
 ---------------------------*/
 .container .squares:nth-child(-n+4):hover {
